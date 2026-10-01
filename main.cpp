@@ -25,7 +25,7 @@ Snowflake CreateSnowflake(int screenWidth, int screenHeight) {
 }
 
 int main(void) {
-    // Автораспознавание монитора
+    // display auto config
     int monitor = GetCurrentMonitor();
     int screenWidth = GetMonitorWidth(monitor);
     int screenHeight = GetMonitorHeight(monitor);
