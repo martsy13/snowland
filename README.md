@@ -1,6 +1,5 @@
 # snowland
-<!-- ![logo](icon.png)\ -->
-<img src="icon.png" width="80" height="80" alt="logo">
+<img src="icon.png" width="80" height="80" alt="logo">\
 **snowland - a Wayland snowfall simulator**\
 A snowfall simulator (XSnow-like) for Wayland, written in C++ using the [raylib](https://github.com/raysan5/raylib) and [raygui](https://github.com/raysan5/raygui) library.
 
