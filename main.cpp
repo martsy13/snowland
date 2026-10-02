@@ -25,17 +25,17 @@ Snowflake CreateSnowflake(int screenWidth, int screenHeight) {
 }
 
 int main(void) {
-    // display auto config
+    SetConfigFlags(FLAG_WINDOW_TRANSPARENT | FLAG_WINDOW_UNDECORATED | FLAG_WINDOW_TOPMOST);
+
+    InitWindow(300, 300, "Snowland - a Wayland snowfall simulator");
+    SetTargetFPS(60);
+
     int monitor = GetCurrentMonitor();
     int screenWidth = GetMonitorWidth(monitor);
     int screenHeight = GetMonitorHeight(monitor);
     if (screenWidth <= 0) screenWidth = 1280;
     if (screenHeight <= 0) screenHeight = 1024;
-
-    SetConfigFlags(FLAG_WINDOW_TRANSPARENT | FLAG_WINDOW_UNDECORATED | FLAG_WINDOW_TOPMOST);
-
-    InitWindow(screenWidth, screenHeight, "Snowland - a Wayland snowfall simulator");
-    SetTargetFPS(60);
+    SetWindowSize(screenWidth, screenHeight);
 
 	Image icon = LoadImage("icon.png"); 
 	SetWindowIcon(icon); 
